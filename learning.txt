@@ -1,0 +1,3 @@
+I used 'python -m venv env' to create a env file
+Then I run ./env/Scripts/activate.ps1
+Then, pip intall flask

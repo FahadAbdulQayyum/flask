@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Templates File</title>
+  </head>
+  <body>
+    <form action="/" method="POST">
+      <input type="text" name="title" id="title" placeholder="Title" />
+      <input type="text" name="desc" id="desc" placeholder" ="Description" />
+      <!-- <input type="button" value="Submit" /> -->
+      <button>Submit</button>
+    </form>
+    <tbody>
+      {% for tod in todo %}
+      <tr>
+        <th></th>
+        <td>{{loop.index}}).</td>
+        <!-- <td>{{tod.sno}}</td> -->
+        <td>{{tod.title}}</td>
+        <td>{{tod.desc}}</td>
+        <td>{{tod.date_created}}</td>
+        <button><a href="/delete/{{tod.sno}}">Delete</a></button>
+        <button><a href="/update/{{tod.sno}}">Update</a></button>
+      </tr>
+      <br />
+      {% endfor %}
+    </tbody>
+  </body>
+</html>
